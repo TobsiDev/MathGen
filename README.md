@@ -11,4 +11,16 @@
   - [ ] Maybe add some color to the menu
 - [ ] Write a random plus assignments to the console.
 - [ ] Write the plus assignments down to 2 separate files. (A student file (without the answers) and a teacher file (with the same questions but with the answers))
+  - [ ] Maybe ad it like this:
+    ```
+    1)                                - this is the assignment number
+    123 + 123                         - this is the assignment
+
+
+
+    Might also be able to do
+
+       123                            - WITH UNDERLINE
+    +  123
+    ```
 - [ ] Maybe make some others like - * / ^
