@@ -2,6 +2,8 @@
 #include <fstream>
 
 #include "plus.h"
+#include "menu.h"
+#include "menu.h"
 
 using namespace std;
 
@@ -17,9 +19,15 @@ int main(int argc, char const *argv[])
 
     file.close();
     
-    cout << "Done." << endl;
+    cout << "Done.\n" << endl;
     
     doShit();
+
+    printTitle();
+
+    // Add this to a while loop (under this line)
+    printMenu();
+    menuChoice();
 
     return 0;
 }
