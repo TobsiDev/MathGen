@@ -21,6 +21,8 @@ void printMenu(){
     std::cout <<
     "\n" <<
     "1\tPlus\n" <<
+    "2\tMinus\n" <<
+    "\n" <<
     "0\tQuit\n"
     << std::endl;
 }
@@ -35,16 +37,28 @@ int menuChoice(){
     char cho = str.at(0);   // Gets the first char in the input string
                             /// Might be able to look at 2 chars like (22) and still get 22 by assigning 2 chars.
 
+    
+
     switch (cho) // takes the char from the input string and checks out what the user typed. 
     {
-    case '1':
-        std::cout << "Cool cool" << std::endl; // Test line
-        return 1;
-        break;
-    
-    default:
-        std::cout << "No BAD, BAD." << std::endl;  // Test line
-        return 0;
-        break;
+        case '0':
+            std::cout << GRN("C'ya next time.") << std::endl;
+            return 0; // exits the program
+            break;
+
+        case '1':
+            writeToFile(PLUS);
+            return 1;
+            break;
+
+        case '2':
+            writeToFile(MINUS);
+            return 2;
+            break;
+
+        default:
+            std::cout << RED("Not an option.") << std::endl;  // Test line
+            return 0; // exits the program
+            break;
     }
 }

@@ -1,7 +1,13 @@
 all: mathGen
 
-mathGen: main.o plus.o menu.o
-	g++ -o mathGen main.o plus.o menu.o
+mathGen: main.o plus.o menu.o writeToFile.o color.o
+	g++ -o mathGen main.o plus.o menu.o writeToFile.o
+
+writeToFile.o: writeToFile.cpp writeToFile.h
+	g++ -c writeToFile.cpp
+
+color.o: color.h
+	g++ -c color.h
 
 menu.o: menu.cpp menu.h
 	g++ -c menu.cpp
