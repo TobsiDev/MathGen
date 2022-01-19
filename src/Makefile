@@ -1,7 +1,10 @@
 all: mathGen
 
-mathGen: main.o plus.o menu.o writeToFile.o color.o
-	g++ -o mathGen main.o plus.o menu.o writeToFile.o
+mathGen: main.o plus.o menu.o writeToFile.o color.o dbgTime.o
+	g++ -o mathGen main.o plus.o menu.o writeToFile.o dbgTime.o
+
+dbgTime.o: dbgTime.cpp dbgTime.h
+	g++ -c dbgTime.cpp
 
 writeToFile.o: writeToFile.cpp writeToFile.h
 	g++ -c writeToFile.cpp

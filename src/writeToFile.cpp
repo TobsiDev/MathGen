@@ -2,6 +2,7 @@
 #include "plus.h"
 
 bool writeToFile(options cate){
+    std::string fileType = ".txt";
     std::string name = inputFileName();
     int numb = inputAmount();
 
@@ -12,19 +13,23 @@ bool writeToFile(options cate){
     
 
     std::ofstream file;
-    file.open(name + " TEST" + ".txt");
+    std::ofstream fileTeacher;
+    file.open(name + "-Student" + fileType);
+    fileTeacher.open(name + "-Teacher" + fileType);
     
     switch (cate)
     {
     case PLUS:
         std::cout << "plus" << std::endl;
-        fileLoop(file, numb);
+        fileLoop(file, fileTeacher, numb, '+');
         file.close();
+        fileTeacher.close();
         break;
     case MINUS:
         std::cout << "minus" << std::endl;
-        fileLoop(file, numb);
+        fileLoop(file, fileTeacher, numb, '-');
         file.close();
+        fileTeacher.close();
         break;    
     default:
         break;
