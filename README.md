@@ -34,6 +34,17 @@
 
 <b><h2 align="center">LANGUAGE UPDATE</h2></b>
 
+### plan:
+
+``` 
+Make a C++ file that scans a folder for language files. 
+The function will work like this: GiveLine(24) where you get line 24 from the current file.
+
+Also make a config file that asks what language you wanna use on the first run.
+```
+
+### TODO:
+
 - [ ] Language Manager
   - [ ] Reads a file and sends the line back
   - [ ] Read files
