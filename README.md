@@ -1,4 +1,4 @@
-<h2 align="center">MathGen V0.1.1</h2>
+<h2 align="center">MathGen V0.1.2</h2>
 
 - cd src
 - make
