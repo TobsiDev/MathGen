@@ -34,7 +34,13 @@ bool writeToFile(options cate){
         break;    
     case MULTI:
         std::cout << "multi" << std::endl;
-        fileLoop(file, fileTeacher, numb, '*', inputSci());
+        fileLoop(file, fileTeacher, numb, '*', askUser("Do you want to get the awnsers as science notations?\n(Y)es\n(N)o\n\n"));
+        file.close();
+        fileTeacher.close();
+        break; 
+    case DIVIS:
+        std::cout << "multi" << std::endl;
+        fileLoop(file, fileTeacher, numb, '/', askUser("Do you want to get the awnsers as science notations?\n(Y)es\n(N)o\n\n"));
         file.close();
         fileTeacher.close();
         break; 

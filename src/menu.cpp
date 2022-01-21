@@ -23,6 +23,7 @@ void printMenu(){
     "1\tPlus\n" <<
     "2\tMinus\n" <<
     "3\tMultiplication\n" <<
+    "4\tDivision\n" <<
     "\n" <<
     "0\tQuit\n"
     << std::endl;
@@ -60,6 +61,10 @@ int menuChoice(){
             writeToFile(MULTI);
             return 3;
             break;
+        case '4':
+            writeToFile(DIVIS);
+            return 3;
+            break;
 
         default:
             std::cout << RED("Not an option.") << std::endl;  // Test line
@@ -68,13 +73,13 @@ int menuChoice(){
     }
 }
 
-bool inputSci(){
+bool askUser(std::string whatToAsk){
 
-    std::cout << "Do you want to get the awnsers as science notations?\n(Y)es\n(N)o\n\n";
+    //std::cout << "Do you want to get the awnsers as science notations?\n(Y)es\n(N)o\n\n";
 
     std::string str;
     
-    std::cout <<
+    std::cout << whatToAsk << "\n" <<
     "Type what you wanna do here: ";
     std::cin >> str;
     

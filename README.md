@@ -27,6 +27,7 @@
     ```
 - [ ] Maybe make some others like - * / ^
   - [X] -
-  - [ ] *
-  - [ ] /
+  - [X] *
+  - [X] /
   - [ ] ^
+  - [ ] √

@@ -9,4 +9,4 @@
 void printTitle();
 void printMenu();
 int menuChoice();
-bool inputSci();
+bool askUser(std::string);

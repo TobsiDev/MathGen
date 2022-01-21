@@ -28,7 +28,7 @@ double getNumb(/*add 2 ints. A min and a max*/){
     return (random()%10000); // %10000 means the maximum number is 10000 (think it's 9999)
 }
 
-double calcRes(int n1, int n2, int r, char MN){
+double calcRes(double n1, double n2, double r, char MN){
     switch (MN)
     {
     case '+':
@@ -40,6 +40,8 @@ double calcRes(int n1, int n2, int r, char MN){
         //break;
     case '*':
         return (n1 * n2);
+    case '/':
+        return (n1 / n2);
     
     default:
         return (n1 + n2);
@@ -68,6 +70,9 @@ void writeNormal(std::ofstream& file, std::ofstream& fileTeacher, int& amount, c
 
         numb1 = getNumb();
         numb2 = getNumb();
+        if (numb1 < numb2){ // I want the big number to always be on the top.
+            std::swap(numb1, numb2);
+        }
         res = calcRes(numb1, numb2, res, mathNotation);
         // std::cout << "Calc: " << std::fixed << res << std::endl; // Debuging
         
@@ -80,7 +85,11 @@ void writeNormal(std::ofstream& file, std::ofstream& fileTeacher, int& amount, c
         fileTeacher << "   " << std::setw(setWidth) << numb1 << std::endl;
         fileTeacher << mathNotation << "  " << std::setw(setWidth) << numb2 << std::endl;
 
-        fileTeacher << "\n=  " << std::fixed << res << "\n" << std::endl;
+        std::ostringstream ss;
+        ss.precision(6); // 6 is the standard
+        ss << std::fixed << res;
+
+        fileTeacher << "\n=  " << ss.str() << "\n" << std::endl;
         //fileTeacher << "   " << numb1 << " " << mathNotation << " " << numb2 << " = "<< res << "\n" << std::endl;
     }
     std::cout << "Done writing to File" << std::endl;
