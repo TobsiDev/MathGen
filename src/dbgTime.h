@@ -2,7 +2,7 @@
 #include <iostream>
 #include <chrono>
 
-enum opt {sec = 0, ms, ns};
+enum opt {SEC = 0, MS, NS};
 
 void startTime();
 void endTime();

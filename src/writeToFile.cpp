@@ -1,5 +1,6 @@
 #include "writeToFile.h"
-#include "plus.h"
+#include "generator.h"
+#include "menu.h"
 
 bool writeToFile(options cate){
     std::string fileType = ".txt";
@@ -21,16 +22,22 @@ bool writeToFile(options cate){
     {
     case PLUS:
         std::cout << "plus" << std::endl;
-        fileLoop(file, fileTeacher, numb, '+');
+        fileLoop(file, fileTeacher, numb, '+', false);
         file.close();
         fileTeacher.close();
         break;
     case MINUS:
         std::cout << "minus" << std::endl;
-        fileLoop(file, fileTeacher, numb, '-');
+        fileLoop(file, fileTeacher, numb, '-', false);
         file.close();
         fileTeacher.close();
         break;    
+    case MULTI:
+        std::cout << "multi" << std::endl;
+        fileLoop(file, fileTeacher, numb, '*', inputSci());
+        file.close();
+        fileTeacher.close();
+        break; 
     default:
         break;
     }

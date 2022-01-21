@@ -22,6 +22,7 @@ void printMenu(){
     "\n" <<
     "1\tPlus\n" <<
     "2\tMinus\n" <<
+    "3\tMultiplication\n" <<
     "\n" <<
     "0\tQuit\n"
     << std::endl;
@@ -55,10 +56,40 @@ int menuChoice(){
             writeToFile(MINUS);
             return 2;
             break;
+        case '3':
+            writeToFile(MULTI);
+            return 3;
+            break;
 
         default:
             std::cout << RED("Not an option.") << std::endl;  // Test line
             return 0; // exits the program
             break;
     }
+}
+
+bool inputSci(){
+
+    std::cout << "Do you want to get the awnsers as science notations?\n(Y)es\n(N)o\n\n";
+
+    std::string str;
+    
+    std::cout <<
+    "Type what you wanna do here: ";
+    std::cin >> str;
+    
+    char sci = str.at(0);   // Gets the first char in the input string
+    toupper(sci);
+
+    switch (sci)
+    {
+    case 'Y':
+    case 'y':
+        return (true);
+        break;
+    
+    default:
+        break;
+    }
+    return false;
 }

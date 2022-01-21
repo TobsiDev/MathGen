@@ -6,7 +6,7 @@
 
 #include "color.h"
 
-enum options {PLUS = 0, MINUS};
+enum options {PLUS = 0, MINUS, MULTI};
 
 bool writeToFile(options cate);
 std::string inputFileName();

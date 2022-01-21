@@ -1,7 +1,7 @@
 all: mathGen
 
-mathGen: main.o plus.o menu.o writeToFile.o color.o dbgTime.o
-	g++ -o mathGen main.o plus.o menu.o writeToFile.o dbgTime.o
+mathGen: main.o generator.o menu.o writeToFile.o color.o dbgTime.o
+	g++ -o mathGen main.o generator.o menu.o writeToFile.o dbgTime.o
 
 dbgTime.o: dbgTime.cpp dbgTime.h
 	g++ -c dbgTime.cpp
@@ -15,8 +15,8 @@ color.o: color.h
 menu.o: menu.cpp menu.h
 	g++ -c menu.cpp
 
-plus.o: plus.cpp plus.h
-	g++ -c plus.cpp
+generator.o: generator.cpp generator.h
+	g++ -c generator.cpp
 
 main.o: main.cpp
 	g++ -c main.cpp
