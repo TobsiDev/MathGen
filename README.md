@@ -31,3 +31,11 @@
   - [X] /
   - [ ] ^
   - [ ] √
+
+<b><h2 align="center">LANGUAGE UPDATE</h2></b>
+
+- [ ] Language Manager
+  - [ ] Reads a file and sends the line back
+  - [ ] Read files
+  - [ ] Get text from a file
+  - [ ] setup a system to scan a folder for language files
