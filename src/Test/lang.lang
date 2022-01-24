@@ -1,0 +1,44 @@
+### LANGUAGE FILE FOR MathGen @ https://github.com/TobsiDev/MathGen 
+#English (En-US)
+Starts writing to File
+Done writing to File
+Not an option.
+Type what you wanna do here: 
+Do you want to get the answers as science notations?
+(Y)es
+(N)o
+Write a filename: 
+FILENAME: 
+Write the amount: 
+AMOUNT: 
+ERROR: 
+NOT A VALID NUMBER
+NOT A NUMBER
+Plus
+Minus
+Multiplication
+Division
+Quit
+C'ya next time.
+
+#Dansk (Da-DK)
+Starter på at skrive til fil
+Færdig med at skrive til fil
+Ikke en mulighed.
+Skriv hvad du vil her: 
+Ønsker du at bruge videnskabelige notationer?
+(Y)Ja
+(N)Nej
+Skriv et filnavn: 
+FILNAVN: 
+Skriv ønskede mængde opgaver: 
+MÆNGDE: 
+ERROR: 
+IKKE ET GYLDIGT NUMMER
+IKKE ET NUMMER
+Plus
+Minus
+Gange
+Dividere
+Slut
+Ses næste gang
