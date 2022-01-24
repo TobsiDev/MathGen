@@ -23,7 +23,7 @@ int langChoice(){
     
     //TODO:
         // Make the user chose their language here.
-        // Do we save the choice in a language file?
+        // Do we save the choice in a config file?
     
     return 1;
 }
