@@ -1,10 +1,10 @@
 #include "fileMan.h"
 #include "color.h"
 
-int spaceBetweenLang = 24;
+int spaceBetweenLang = 25;
 int languages = 2;
 
-void langChoice(){
+void langChoice(bool showM){
     int count = 0;
     int lineUnder = 0;
     for (size_t i = 0; i < languages; i++)
@@ -38,25 +38,49 @@ void langChoice(){
     {
     case '1':
         // English
-        std::cout << GRN(<< readLine(choi) <<) << std::endl;
+        std::cout << GRN(<< rL(choi) <<) << std::endl;
         conf << "ENG_US" << std::endl;
         break;
     case '2':
         // Danish
-        setInt(choi);
-        std::cout << GRN(<< readLine(choi) <<) << std::endl;
+        choi += (spaceBetweenLang*DAN_DK);
+        std::cout << GRN(<< rL(choi) <<) << std::endl;
         conf << "DAN_DK" << std::endl;
         break;
     
     default:
-        std::cout << RED(<< readLine(7) <<) << std::endl;
+        std::cout << RED(<< rL(8) <<) << std::endl;
+        langChoice(false);
         break;
     }
     /*Writes the awnser to a config file. 
     Now everytime we need to know what language they use, just read it from the config file.
     */
+
+   if (showM == true)
+   {
+        std::string sss ("");
+        std::cout << readLine(5) << std::endl;
+        std::cin >> sss; 
+   }
+   
+
    conf.close();
 
+}
+
+std::string rL(int lineNumb){
+    lineNumb--;
+
+    std::string line (""); // stores the line we've read
+    std::ifstream fileToRead ("lang.lang"); // this is the file we're reading from
+
+    for (size_t i = 0; i <= lineNumb; i++) // for loop to loop to the line we want to read
+    {
+        getline(fileToRead, line);
+    }
+    fileToRead.close(); // closes the file we're reading from
+    return line;
 }
 
 std::string readLine(int lineNumb){
@@ -202,6 +226,7 @@ LANGUAGE langConf(){
     }
     else
     {
+        langChoice(true); // If the file doesn't exist, we create one.
         return ENG_US;
     }
 }
@@ -223,4 +248,8 @@ void testL(int line){
     }
 
 
+}
+
+void startup(){
+    langConf();
 }

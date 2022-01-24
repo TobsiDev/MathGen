@@ -2,6 +2,7 @@
 1) #English (En-US)
     Do you wish to run the program in English? Type 1
 You chose English.
+Type anything and press enter to continue... 
 Starts writing to File
 Done writing to File
 Not an option.
@@ -26,6 +27,7 @@ C'ya next time.
 2) #Dansk (Da-DK)
     Ønsker du at køre programmet på Dansk? Tast 2
 Du valgte Dansk.
+Skriv noget og tryk på enter for at fortsætte... 
 Starter på at skrive til fil
 Færdig med at skrive til fil
 Ikke en mulighed.
