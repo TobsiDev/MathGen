@@ -1,5 +1,7 @@
 ### LANGUAGE FILE FOR MathGen @ https://github.com/TobsiDev/MathGen 
-#English (En-US)
+1) #English (En-US)
+    Do you wish to run the program in English? Type 1
+You chose English.
 Starts writing to File
 Done writing to File
 Not an option.
@@ -21,7 +23,9 @@ Division
 Quit
 C'ya next time.
 
-#Dansk (Da-DK)
+2) #Dansk (Da-DK)
+    Ønsker du at køre programmet på Dansk? Tast 2
+Du valgte Dansk.
 Starter på at skrive til fil
 Færdig med at skrive til fil
 Ikke en mulighed.

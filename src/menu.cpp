@@ -98,3 +98,4 @@ bool askUser(std::string whatToAsk){
     }
     return false;
 }
+
