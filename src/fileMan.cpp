@@ -213,7 +213,7 @@ LANGUAGE langConf(){
 
     std::ifstream conf ("config.conf");
     getline(conf, str);
-    std::cout << "FROM langConf(): " << str << std::endl;
+    //std::cout << "FROM langConf(): " << str << std::endl;
     conf.close();
     
     if (str == "ENG_US")

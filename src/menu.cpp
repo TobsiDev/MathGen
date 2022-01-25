@@ -1,13 +1,14 @@
 #include "menu.h"
+#include "fileMan.h"
 
-void printTitle(){
+/*void printTitle(){
     std::cout << RED(BackBLK(<< "\n\n" <<
                 "███╗   ███╗ █████╗ ████████╗██╗  ██╗ ██████╗ ███████╗███╗   ██╗\n" <<
                 "████╗ ████║██╔══██╗╚══██╔══╝██║  ██║██╔════╝ ██╔════╝████╗  ██║\n" <<
                 "██╔████╔██║███████║   ██║   ███████║██║  ███╗█████╗  ██╔██╗ ██║\n" <<
                 "██║╚██╔╝██║██╔══██║   ██║   ██╔══██║██║   ██║██╔══╝  ██║╚██╗██║\n" <<
                 "██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║╚██████╔╝███████╗██║ ╚████║\n" <<
-                "╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝" <<)) << std::endl;/*<< "\n" <<
+                "╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝" <<)) << std::endl;*//*<< "\n" <<
                 "███╗   ███╗ █████╗ ████████╗██╗  ██╗ ██████╗ ███████╗███╗   ██╗\n" <<
                 "████╗ ████║██╔══██╗╚══██╔══╝██║  ██║██╔════╝ ██╔════╝████╗  ██║\n" <<
                 "██╔████╔██║███████║   ██║   ███████║██║  ███╗█████╗  ██╔██╗ ██║\n" <<
@@ -15,17 +16,17 @@ void printTitle(){
                 "██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║╚██████╔╝███████╗██║ ╚████║\n" <<
                 "╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝\n" << std::endl;*/
                 //std::cout << "Test" << std::endl;
-}
+//}
 
 void printMenu(){
     std::cout <<
     "\n" <<
-    "1\tPlus\n" <<
-    "2\tMinus\n" <<
-    "3\tMultiplication\n" <<
-    "4\tDivision\n" <<
+    "1\t"<< readLine(20) << "\n" <<
+    "2\t"<< readLine(21) << "\n" <<
+    "3\t"<< readLine(22) << "\n" <<
+    "4\t"<< readLine(23) << "\n" <<
     "\n" <<
-    "0\tQuit\n"
+    "0\t"<< readLine(24) << "\n"
     << std::endl;
 }
 
@@ -33,7 +34,7 @@ int menuChoice(){
     std::string str;
     
     std::cout <<
-    "Type what you wanna do here: ";
+    readLine(9);
     std::cin >> str;
     
     char cho = str.at(0);   // Gets the first char in the input string
@@ -44,7 +45,7 @@ int menuChoice(){
     switch (cho) // takes the char from the input string and checks out what the user typed. 
     {
         case '0':
-            std::cout << GRN("C'ya next time.") << std::endl;
+            std::cout << GRN(<< readLine(25) <<) << std::endl;
             return 0; // exits the program
             break;
 
@@ -67,7 +68,7 @@ int menuChoice(){
             break;
 
         default:
-            std::cout << RED("Not an option.") << std::endl;  // Test line
+            std::cout << RED(<< readLine(8) <<) << std::endl;  // Test line
             return 0; // exits the program
             break;
     }
@@ -80,7 +81,7 @@ bool askUser(std::string whatToAsk){
     std::string str;
     
     std::cout << whatToAsk << "\n" <<
-    "Type what you wanna do here: ";
+    readLine(9);
     std::cin >> str;
     
     char sci = str.at(0);   // Gets the first char in the input string

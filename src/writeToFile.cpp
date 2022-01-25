@@ -34,13 +34,13 @@ bool writeToFile(options cate){
         break;    
     case MULTI:
         std::cout << "multi" << std::endl;
-        fileLoop(file, fileTeacher, numb, '*', askUser("Do you want to get the awnsers as science notations?\n(Y)es\n(N)o\n\n"));
+        fileLoop(file, fileTeacher, numb, '*', (askUser(readLine(10)+"\n"+readLine(11)+"\n"+readLine(12)+"\n\n")));
         file.close();
         fileTeacher.close();
         break; 
     case DIVIS:
-        std::cout << "multi" << std::endl;
-        fileLoop(file, fileTeacher, numb, '/', askUser("Do you want to get the awnsers as science notations?\n(Y)es\n(N)o\n\n"));
+        std::cout << "divis" << std::endl;
+        fileLoop(file, fileTeacher, numb, '/', (askUser(readLine(10)+"\n"+readLine(11)+"\n"+readLine(12)+"\n\n")));
         file.close();
         fileTeacher.close();
         break; 
@@ -52,29 +52,29 @@ bool writeToFile(options cate){
 
 std::string inputFileName(){ // User inputs the filename
     std::string fileName;
-    std::cout << "Write a filename: ";
+    std::cout << readLine(13);
     std::cin.ignore();
     std::getline(std::cin, fileName);
-    std::cout << "FILENAME: " << fileName << std::endl;
+    std::cout << readLine(14) << fileName << std::endl;
     return fileName;
 }
 
 int inputAmount(){ // User inputs the amount of math problems they want
     int amount;
-    std::cout << "Write the amount: ";
+    std::cout << readLine(15);
     try // Try at error handling
     {
         std::cin >> amount;
         if (amount <= 0)
         {
-            std::cout << RED("ERROR:") << " NOT A VALID NUMBER" << std::endl; // Prints a "error message" to the user
+            std::cout << RED("ERROR: ") << readLine(18) << std::endl; // Prints a "error message" to the user
         }
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
-        std::cout << RED("ERROR:") << " NOT A NUMBER" << std::endl;
+        std::cout << RED("ERROR: ") << readLine(19) << std::endl;
     }
-    std::cout << "AMOUNT: " << amount << std::endl;
+    std::cout << readLine(16) << amount << std::endl;
     return amount;
 }

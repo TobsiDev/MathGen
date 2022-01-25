@@ -1,5 +1,8 @@
 #include "generator.h"
 #include "dbgTime.h"
+#include "menu.h"
+
+// TODO: Countinue from here, and move up the .cpp files
 
 std::string sendStr(){
     return "Test from plus.cpp!!!";
@@ -62,7 +65,7 @@ int getWidth(int numb1, int numb2){
 
 void writeNormal(std::ofstream& file, std::ofstream& fileTeacher, int& amount, char& mathNotation){
     double numb1, numb2, res, setWidth;
-    std::cout << "Starts writing to File" << std::endl;
+    std::cout << readLine(6) << std::endl;
     for (int i = 0; i < amount; i++)
     {
         file << i << ")" << std::endl;
@@ -92,12 +95,12 @@ void writeNormal(std::ofstream& file, std::ofstream& fileTeacher, int& amount, c
         fileTeacher << "\n=  " << ss.str() << "\n" << std::endl;
         //fileTeacher << "   " << numb1 << " " << mathNotation << " " << numb2 << " = "<< res << "\n" << std::endl;
     }
-    std::cout << "Done writing to File" << std::endl;
+    std::cout << readLine(7) << std::endl;
 }
 
 void writeSci(std::ofstream& file, std::ofstream& fileTeacher, int& amount, char& mathNotation){
     double numb1, numb2, res, setWidth;
-    std::cout << "Starts writing to File" << std::endl;
+    std::cout << readLine(6) << std::endl;
     for (int i = 0; i < amount; i++)
     {
         file << i << ")" << std::endl;
@@ -120,5 +123,5 @@ void writeSci(std::ofstream& file, std::ofstream& fileTeacher, int& amount, char
         fileTeacher << "\n=  " << std::scientific << res << "\n" << std::endl;
         //fileTeacher << "   " << numb1 << " " << mathNotation << " " << numb2 << " = "<< res << "\n" << std::endl;
     }
-    std::cout << "Done writing to File" << std::endl;
+    std::cout << readLine(7) << std::endl;
 }
